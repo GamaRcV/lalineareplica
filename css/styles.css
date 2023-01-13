@@ -1,0 +1,324 @@
+:root {
+    --morado: #5811C7;
+    --verde: #61CF56;
+
+}
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(/img/body-bg.png);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.Header {
+
+    background-color: var(--morado);
+}
+
+.HeaderContenido {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+.HeaderContenido__Left {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+
+}
+
+.Header__Imagen {
+    transform: translateY(4rem) scale(1.2);
+}
+
+.Header__Texto {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.Header__Texto h1 {
+    font-size: 3.2rem;
+    margin: 1rem;
+}
+
+.Header__Texto p {
+    font-size: 2.4rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.Header__Form {
+    overflow: hidden;
+    width: 17rem;
+}
+
+.Header__Form input {
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #F1F1F2;
+    padding: .5rem;
+    width: 100%;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}
+
+.Header__Form a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.Header__Login {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.Login-check {
+    margin-top: .5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    gap: .5rem;
+}
+
+.Login__btn {
+    background-color: #F98617;
+    border-radius: .2rem;
+    padding: .5rem 3rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+}
+
+.Login__btn:hover {
+    background-color: #F94C17;
+    cursor: pointer;
+}
+
+.flex-btn {
+    border: none;
+    display: flex;
+    gap: .8rem;
+    margin-bottom: 1rem;
+}
+
+.Login__Facebook {
+    padding: .5rem 1rem;
+    color: #fff;
+    background-color: #264FA7;
+    border-radius: .5rem;
+}
+.Login__Facebook:hover{
+    cursor: pointer;
+}
+.Login__Google {
+    padding: .5rem 1rem;
+    color: #fff;
+    background-color: #F94C17;
+    border-radius: .5rem;
+}
+.Login__Google:hover{
+    cursor: pointer;
+}
+.Header__Registrate {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-image: url(/img/header_right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+
+}
+
+.Header__Registrate a {
+    padding: 1rem 0;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.Header__Registrate a:first-child {
+    background-color: #B46CB6;
+}
+
+.Header__Registrate a:nth-child(2) {
+    background-color: var(--verde);
+}
+
+.Header__Registrate a:nth-child(4) {
+    color: var(--morado);
+    align-self: center;
+    margin: 0;
+    padding: .5rem 2rem;
+    font-size: 1.6rem;
+    border-radius: unset;
+    border-left: 2px solid var(--morado);
+    border-right: 2px solid var(--morado);
+    font-weight: 700;
+}
+
+.Header__Registrate a:nth-child(4):hover {
+    color: #fff;
+    border-left: 2px solid var(#fff);
+    border-right: 2px solid var(#fff);
+}
+
+/* .Header__Registrate::after{
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 100%;
+    position: absolute;
+    background-color: #8D8B8B;
+    right: 95%;
+    top: 0;
+    border-radius: 100% 0 0 100%;
+    z-index: 2;
+    
+} */
+
+.Nav {
+    background-color: var(--verde);
+    padding: 2rem 0;
+    padding-left: 18rem;
+
+}
+
+.Nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+    border-right: 1px solid var(--morado);
+    font-weight: 700;
+}
+
+.Nav a:last-child {
+    border-right: none;
+}
+
+/* Parte del banner*/
+.Hero {
+    height: 17rem;
+    background-image: url(/img/banner.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.Hero__Parrafo {
+    background-color: var(--morado);
+    display: inline-block;
+    padding: 0 3rem;
+    position: absolute;
+    left: -2rem;
+    transform: skew(30deg);
+    box-shadow: 14px 0px 0px -2px rgba(66, 64, 99, 1);
+    -webkit-box-shadow: 14px 0px 0px -2px rgba(66, 64, 99, 1);
+    -moz-box-shadow: 14px 0px 0px -2px rgba(66, 64, 99, 1);
+}
+
+.Hero__Parrafo p {
+    margin: 0;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transform: skew(-30deg);
+}
+/*Apartado Descargas*/
+.descargas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: #CFCFCF;
+    padding: 2rem;
+    padding-top: 2rem;
+
+}
+.location {
+    display: grid;
+    align-content: center;
+    grid-column: 1 / 2;
+}
+.location p{
+    text-align: center;
+}
+
+.descarga__apps{
+    background-color: var(--verde);
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+.descarga_texto{
+    font-size: 1.4rem;
+}
+.apps__iconos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.map__enlace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map__enlace span{
+}
+.map__enlace img{
+    width: 20%;
+}
+.camaras {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.camaras__opciones {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.btn_opciones{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 8rem;
+    font-size: 1.6rem;
+    
+}
