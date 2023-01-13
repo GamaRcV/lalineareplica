@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
             }
 
-            console.log(map)
+            
 
 
         });
