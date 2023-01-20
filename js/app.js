@@ -59,6 +59,9 @@ const btnCerrarPremium = document.querySelector(".btnCerrarPremium")
 const btnCancelarPremium = document.querySelector("#cancel")
 const confirmPremium = document.querySelector("#confirm")
 
+confirmPremium.addEventListener("click",()=>{
+    alert("Estamos trabajando en la versión Premium✨")
+})
 // Modificar tamaño de video ya sea zoom o disminuir zoom
 const zoom = document.querySelector("#zoom")
 const minum = document.querySelector("#minum")
@@ -102,11 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //     window.location.href ="./contacto.html"
     // }
     botones.forEach((boton, index) => {
-        
+
         boton.addEventListener("mouseover", () => {
             mapa.src = rutasHover[index];
         });
-        
+
         boton.addEventListener("mouseout", () => {
             mapa.src = imagendefault
         });
@@ -242,22 +245,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     ModalContainerPremium.style.opacity = "0"
                     ModalContainerPremium.style.visibility = "hidden"
                 })
-                confirmPremium.addEventListener("click", () => {
-                    alert("Estamos trabajando en la version Premium")
-                })
+                
             }
 
         });
 
     });
     //Hora de actualizacion del video
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("hora").innerHTML = this.responseText;
-        }
-    };
-    xhttp.open("GET", "live/hora.txt", true);
+    fetch('live/hora.txt')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("hora").innerHTML = data;
+        });
     //codigo para que tome el video
     if (Hls.isSupported()) {
         var video = document.getElementById('video');
@@ -265,10 +264,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // bind them together
         hls.attachMedia(video);
         hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-          hls.loadSource("http://34.125.113.233/live/mystream.m3u8");
-          hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
-          });
+            hls.loadSource("http://34.125.113.233/live/mystream.m3u8");
+            hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+            });
         });
-    }    
+    }
 });
 
+//Prueba
