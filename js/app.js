@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // bind them together
         hls.attachMedia(video);
         hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-            hls.loadSource("http://34.125.113.233/live/mystream.m3u8");
+            hls.loadSource("http://lalineabaralabs.ddns.net/live/mystream.m3u8");
             hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
             });
         });
