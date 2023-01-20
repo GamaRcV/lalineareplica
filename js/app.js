@@ -102,9 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //     window.location.href ="./contacto.html"
     // }
     botones.forEach((boton, index) => {
+        
         boton.addEventListener("mouseover", () => {
             mapa.src = rutasHover[index];
         });
+        
         boton.addEventListener("mouseout", () => {
             mapa.src = imagendefault
         });
