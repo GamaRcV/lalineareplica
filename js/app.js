@@ -1,3 +1,10 @@
+let redirect = false;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if(!redirect){
+        redirect = true;
+        window.location.href="./movil.html"
+    }
+}
 const botones = document.querySelectorAll("#btn1, #btn2, #btn3, #btn4");
 const mapa = document.querySelector("#mapa");
 let imagendefault = "./img/mapas/blank.png"
@@ -101,11 +108,8 @@ const rutasHover = [
 ];
 mapa.src = imagendefault
 document.addEventListener("DOMContentLoaded", () => {
-    // if(screen.width <= 1024){
-    //     window.location.href ="./contacto.html"
-    // }
+    
     botones.forEach((boton, index) => {
-
         boton.addEventListener("mouseover", () => {
             mapa.src = rutasHover[index];
         });

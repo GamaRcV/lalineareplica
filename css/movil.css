@@ -1,0 +1,120 @@
+:root {
+    --morado: #5811C7;
+    --verde: #61CF56;
+
+}
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #5f2c82;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 3rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.flex{
+    display: flex;
+    gap:3rem;
+}
+.flex p{
+    font-size: 1.8rem;
+    font-weight: 900;
+    color:#fff;
+    font-style: italic;
+}
+.img-logo{
+    width:20%
+}
+
+.contenedor-texto{
+    color: #fff;
+    text-align: center;
+}
+.contenedor-texto h2 {
+    margin: 0;
+    padding-bottom: 2rem;
+    font-weight: 900;
+}
+.contenedor-texto p {
+    font-size: 1.4rem;
+}
+.contenedor-descargas{
+    padding-top:4rem ;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.contenedor-descargas a {
+    text-decoration: none;
+    display: flex;
+    color: #fff;
+    gap: .5rem;
+}
+.contenedor-descargas button {
+    font-size: 1.8rem;
+    border: none;
+    border: 1px solid #fff;
+    background-color: #4B999C;
+    padding: 1rem ;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+/* media para pc */
+@media(min-width:900px){
+    .img-logo{
+        width:10%
+    }
+    .flex p{
+        font-size: 3rem;
+        font-weight: 900;
+        color:#fff;
+        font-style: italic;
+    }
+    .flex{
+        display: flex;
+        gap:3rem;
+        justify-content: space-evenly;
+    }
+    .imagenes-movil {
+        width: 80%;
+    }
+    .contenedor {
+        width: 95%;
+        max-width: 120rem;
+        min-width: 120rem;
+        margin: 0 auto;
+    }
+    .contenedor-imagenes{
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor-texto h2 {
+        margin: 0;
+        padding-bottom: 4rem;
+        font-weight: 900;
+    }
+    .contenedor-texto p {
+        font-size: 2rem;
+    }
+    .contenedor-descargas button:hover {
+        background-color: var(--morado);
+        
+    }
+}
